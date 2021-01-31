@@ -13,10 +13,10 @@
 
 class Solution:
     def detectCycle(self, head: ListNode) -> ListNode:
-        fast, slow = head, head
+        slow, fast = head, head
         while True:
-            if not (fast and fast.next):
-                return None
+            if not fast or not fast.next:
+                return
             fast, slow = fast.next.next, slow.next
             if fast == slow:
                 break
