@@ -11,7 +11,7 @@ public:
     int numDistinct(string s, string t)
     {
         int n = s.size();
-        vector<long long> dp(n + 1, 1);
+        vector<unsigned int> dp(n + 1, 1);
         for (const auto &c : t)
         {
             auto last = dp[0];
